@@ -29,6 +29,15 @@ class SavedCharactersVC: UIViewController, UITabBarControllerDelegate {
     }
     
     
+    func didSelectCell(_ row: Int) {
+        
+        let storyboard = UIStoryboard(name: "Character", bundle: nil)
+        let characterVC = storyboard.instantiateViewController(withIdentifier: "CharacterVC") as! CharacterVC
+        characterVC.character = characters[row]
+        self.navigationController?.show(characterVC, sender: nil)
+    }
+    
+    
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         if viewController == self.navigationController {
             characters = CoreDataServise.standard.getSavedCharacters()
