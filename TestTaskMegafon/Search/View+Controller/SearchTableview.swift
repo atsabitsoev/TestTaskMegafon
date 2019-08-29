@@ -29,4 +29,10 @@ extension SearchVC: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        if scrollView.contentSize.height - scrollView.bounds.height <= scrollView.contentOffset.y {
+            self.startSearch(searchServise.currentSearchString)
+        }
+    }
+    
 }

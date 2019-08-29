@@ -18,10 +18,24 @@ class SearchService {
     private init() {}
     
     
+    private var currentResults: [Character]?
+    private var currentPage: Int = 1
+    private var nextPageExists = true
+    var currentSearchString: String = "nil"
+    
+    
     func searchPeople(by searchString: String,
                       handler: @escaping (_ characters: [Character]?) -> ()) {
         
-        let url = "\(ApiInfo.baseUrl)/?search=\(searchString)"
+        guard searchString != currentSearchString || nextPageExists else { return }
+        
+        if searchString == currentSearchString {
+            currentPage += 1
+        } else {
+            currentPage = 1
+        }
+        
+        let url = "\(ApiInfo.baseUrl)/?page=\(currentPage)&search=\(searchString)"
         
         AF.request(url,
                    method: .get,
@@ -41,10 +55,15 @@ class SearchService {
                         
                     case 200:
                         
+                        self.nextPageExists = json["next"].string != nil
                         let results = json["results"].arrayValue
                         let characters = self.parseCharactersFromJSONArray(results: results)
                         
-                        handler(characters)
+                        
+                        self.currentResults = searchString == self.currentSearchString ? (self.currentResults ?? []) + characters : characters
+                        handler(self.currentResults)
+                        
+                        self.currentSearchString = searchString
                         
                     default:
                         handler(nil)

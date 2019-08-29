@@ -19,19 +19,23 @@ class SearchVC: UIViewController {
     
     var timer: Timer?
     
-    var characters: [Character] = []
+    var characters: [Character] = [] {
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        searchServise.sendEmptySearchRequest(handler: showNewSearchData(_:))
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        searchServise.sendEmptySearchRequest(handler: showNewSearchData(_:))
+        
     }
     
     
@@ -43,7 +47,6 @@ class SearchVC: UIViewController {
         }
         
         self.characters = characters
-        tableView.reloadData()
     }
     
     
@@ -63,7 +66,8 @@ class SearchVC: UIViewController {
     
     
     func startSearch(_ str: String) {
-        searchServise.searchPeople(by: str, handler: showNewSearchData(_ :))
+        searchServise.searchPeople(by: str,
+                                   handler: showNewSearchData(_ :))
     }
     
     
