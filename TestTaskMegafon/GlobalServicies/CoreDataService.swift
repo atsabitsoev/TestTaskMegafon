@@ -37,10 +37,10 @@ class CoreDataServise {
         characterEntity.mass = character.mass
         characterEntity.name = character.name
         characterEntity.skinColor = character.skinColor
-        characterEntity.species?.setValue(character.species, forKey: "species")
-        characterEntity.starships?.setValue(character.starships, forKey: "starships")
+        characterEntity.setValue(character.species, forKey: "species")
+        characterEntity.setValue(character.starships, forKey: "starships")
         characterEntity.url = character.url
-        characterEntity.vehicles?.setValue(character.vehicles, forKey: "vehicles")
+        characterEntity.setValue(character.vehicles, forKey: "vehicles")
         
         do {
             try context.save()
