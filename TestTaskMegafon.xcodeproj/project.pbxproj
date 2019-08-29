@@ -7,23 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60CD77173717D69B996C9508 /* Pods_TestTaskMegafon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3A0BA89D2DB7C8EB1A6731 /* Pods_TestTaskMegafon.framework */; };
 		AC73ECB323180480006783C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC73ECB223180480006783C0 /* AppDelegate.swift */; };
-		AC73ECB523180480006783C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC73ECB423180480006783C0 /* ViewController.swift */; };
-		AC73ECB823180480006783C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC73ECB623180480006783C0 /* Main.storyboard */; };
 		AC73ECBB23180480006783C0 /* TestTaskMegafon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC73ECB923180480006783C0 /* TestTaskMegafon.xcdatamodeld */; };
 		AC73ECBD23180481006783C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC73ECBC23180481006783C0 /* Assets.xcassets */; };
 		AC73ECC023180481006783C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC73ECBE23180481006783C0 /* LaunchScreen.storyboard */; };
+		AC73ECC9231804CA006783C0 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC73ECC8231804CA006783C0 /* Search.storyboard */; };
+		AC73ECD223180568006783C0 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC73ECD123180568006783C0 /* SearchVC.swift */; };
+		AC73ECD42318064A006783C0 /* SearchTableview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC73ECD32318064A006783C0 /* SearchTableview.swift */; };
+		AC73ECD623180777006783C0 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC73ECD523180777006783C0 /* SearchService.swift */; };
+		AC73ECD9231808F6006783C0 /* ApiInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC73ECD8231808F6006783C0 /* ApiInfo.swift */; };
+		AC73ECDD2318116D006783C0 /* SearchSearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC73ECDC2318116D006783C0 /* SearchSearchBarDelegate.swift */; };
+		AC73ECDF23181F4A006783C0 /* Character.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC73ECDE23181F4A006783C0 /* Character.storyboard */; };
+		AC73ECE1231820EA006783C0 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC73ECE0231820EA006783C0 /* Character.swift */; };
+		AC73ECE52318272B006783C0 /* CharacterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC73ECE42318272B006783C0 /* CharacterVC.swift */; };
+		AC73ECE7231827AE006783C0 /* CharacterTableview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC73ECE6231827AE006783C0 /* CharacterTableview.swift */; };
+		AC73ECE923183D9C006783C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC73ECE823183D9C006783C0 /* Main.storyboard */; };
+		AC73ECEB23183DF9006783C0 /* SavedCharacters.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC73ECEA23183DF9006783C0 /* SavedCharacters.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		51241D88E30C8E9176C5169B /* Pods-TestTaskMegafon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTaskMegafon.release.xcconfig"; path = "Target Support Files/Pods-TestTaskMegafon/Pods-TestTaskMegafon.release.xcconfig"; sourceTree = "<group>"; };
 		AC73ECAF23180480006783C0 /* TestTaskMegafon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTaskMegafon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC73ECB223180480006783C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AC73ECB423180480006783C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AC73ECB723180480006783C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC73ECBA23180480006783C0 /* TestTaskMegafon.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestTaskMegafon.xcdatamodel; sourceTree = "<group>"; };
 		AC73ECBC23180481006783C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC73ECBF23180481006783C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC73ECC123180481006783C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC73ECC8231804CA006783C0 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		AC73ECD123180568006783C0 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		AC73ECD32318064A006783C0 /* SearchTableview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableview.swift; sourceTree = "<group>"; };
+		AC73ECD523180777006783C0 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		AC73ECD8231808F6006783C0 /* ApiInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiInfo.swift; sourceTree = "<group>"; };
+		AC73ECDC2318116D006783C0 /* SearchSearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSearchBarDelegate.swift; sourceTree = "<group>"; };
+		AC73ECDE23181F4A006783C0 /* Character.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Character.storyboard; sourceTree = "<group>"; };
+		AC73ECE0231820EA006783C0 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		AC73ECE42318272B006783C0 /* CharacterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterVC.swift; sourceTree = "<group>"; };
+		AC73ECE6231827AE006783C0 /* CharacterTableview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableview.swift; sourceTree = "<group>"; };
+		AC73ECE823183D9C006783C0 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		AC73ECEA23183DF9006783C0 /* SavedCharacters.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SavedCharacters.storyboard; sourceTree = "<group>"; };
+		EA3A0BA89D2DB7C8EB1A6731 /* Pods_TestTaskMegafon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestTaskMegafon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD27B047ED4B3046B53D0E7F /* Pods-TestTaskMegafon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTaskMegafon.debug.xcconfig"; path = "Target Support Files/Pods-TestTaskMegafon/Pods-TestTaskMegafon.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +55,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60CD77173717D69B996C9508 /* Pods_TestTaskMegafon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		79D1BE69F0B71F816A0F60FF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FD27B047ED4B3046B53D0E7F /* Pods-TestTaskMegafon.debug.xcconfig */,
+				51241D88E30C8E9176C5169B /* Pods-TestTaskMegafon.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A3730CDF5EEC8DB57710D175 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA3A0BA89D2DB7C8EB1A6731 /* Pods_TestTaskMegafon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AC73ECA623180480006783C0 = {
 			isa = PBXGroup;
 			children = (
 				AC73ECB123180480006783C0 /* TestTaskMegafon */,
 				AC73ECB023180480006783C0 /* Products */,
+				79D1BE69F0B71F816A0F60FF /* Pods */,
+				A3730CDF5EEC8DB57710D175 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +100,73 @@
 		AC73ECB123180480006783C0 /* TestTaskMegafon */ = {
 			isa = PBXGroup;
 			children = (
-				AC73ECB223180480006783C0 /* AppDelegate.swift */,
-				AC73ECB423180480006783C0 /* ViewController.swift */,
-				AC73ECB623180480006783C0 /* Main.storyboard */,
-				AC73ECBC23180481006783C0 /* Assets.xcassets */,
-				AC73ECBE23180481006783C0 /* LaunchScreen.storyboard */,
+				AC73ECD7231808DF006783C0 /* Global Entities */,
+				AC73ECCA231804D9006783C0 /* Search */,
+				AC73ECE2231826C1006783C0 /* Character */,
+				AC73ECC7231804B0006783C0 /* Supporting Files */,
 				AC73ECC123180481006783C0 /* Info.plist */,
 				AC73ECB923180480006783C0 /* TestTaskMegafon.xcdatamodeld */,
 			);
 			path = TestTaskMegafon;
+			sourceTree = "<group>";
+		};
+		AC73ECC7231804B0006783C0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AC73ECB223180480006783C0 /* AppDelegate.swift */,
+				AC73ECE823183D9C006783C0 /* Main.storyboard */,
+				AC73ECC8231804CA006783C0 /* Search.storyboard */,
+				AC73ECEA23183DF9006783C0 /* SavedCharacters.storyboard */,
+				AC73ECDE23181F4A006783C0 /* Character.storyboard */,
+				AC73ECBC23180481006783C0 /* Assets.xcassets */,
+				AC73ECBE23180481006783C0 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AC73ECCA231804D9006783C0 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				AC73ECCB23180501006783C0 /* View+Controller */,
+				AC73ECCE23180539006783C0 /* Model */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		AC73ECCB23180501006783C0 /* View+Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AC73ECD123180568006783C0 /* SearchVC.swift */,
+				AC73ECD32318064A006783C0 /* SearchTableview.swift */,
+				AC73ECDC2318116D006783C0 /* SearchSearchBarDelegate.swift */,
+			);
+			path = "View+Controller";
+			sourceTree = "<group>";
+		};
+		AC73ECCE23180539006783C0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AC73ECD523180777006783C0 /* SearchService.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AC73ECD7231808DF006783C0 /* Global Entities */ = {
+			isa = PBXGroup;
+			children = (
+				AC73ECD8231808F6006783C0 /* ApiInfo.swift */,
+				AC73ECE0231820EA006783C0 /* Character.swift */,
+			);
+			path = "Global Entities";
+			sourceTree = "<group>";
+		};
+		AC73ECE2231826C1006783C0 /* Character */ = {
+			isa = PBXGroup;
+			children = (
+				AC73ECE42318272B006783C0 /* CharacterVC.swift */,
+				AC73ECE6231827AE006783C0 /* CharacterTableview.swift */,
+			);
+			path = Character;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +176,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC73ECC423180481006783C0 /* Build configuration list for PBXNativeTarget "TestTaskMegafon" */;
 			buildPhases = (
+				8DB1D7BEBA5C46F911B78736 /* [CP] Check Pods Manifest.lock */,
 				AC73ECAB23180480006783C0 /* Sources */,
 				AC73ECAC23180480006783C0 /* Frameworks */,
 				AC73ECAD23180480006783C0 /* Resources */,
+				2C116FAA3BB185421AE54725 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,36 +229,87 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC73ECDF23181F4A006783C0 /* Character.storyboard in Resources */,
+				AC73ECE923183D9C006783C0 /* Main.storyboard in Resources */,
+				AC73ECEB23183DF9006783C0 /* SavedCharacters.storyboard in Resources */,
 				AC73ECC023180481006783C0 /* LaunchScreen.storyboard in Resources */,
+				AC73ECC9231804CA006783C0 /* Search.storyboard in Resources */,
 				AC73ECBD23180481006783C0 /* Assets.xcassets in Resources */,
-				AC73ECB823180480006783C0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2C116FAA3BB185421AE54725 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestTaskMegafon/Pods-TestTaskMegafon-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestTaskMegafon/Pods-TestTaskMegafon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8DB1D7BEBA5C46F911B78736 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestTaskMegafon-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AC73ECAB23180480006783C0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC73ECD223180568006783C0 /* SearchVC.swift in Sources */,
+				AC73ECE7231827AE006783C0 /* CharacterTableview.swift in Sources */,
 				AC73ECBB23180480006783C0 /* TestTaskMegafon.xcdatamodeld in Sources */,
-				AC73ECB523180480006783C0 /* ViewController.swift in Sources */,
 				AC73ECB323180480006783C0 /* AppDelegate.swift in Sources */,
+				AC73ECD623180777006783C0 /* SearchService.swift in Sources */,
+				AC73ECDD2318116D006783C0 /* SearchSearchBarDelegate.swift in Sources */,
+				AC73ECD9231808F6006783C0 /* ApiInfo.swift in Sources */,
+				AC73ECD42318064A006783C0 /* SearchTableview.swift in Sources */,
+				AC73ECE52318272B006783C0 /* CharacterVC.swift in Sources */,
+				AC73ECE1231820EA006783C0 /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AC73ECB623180480006783C0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AC73ECB723180480006783C0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AC73ECBE23180481006783C0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -284,11 +439,13 @@
 		};
 		AC73ECC523180481006783C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD27B047ED4B3046B53D0E7F /* Pods-TestTaskMegafon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 89WB9E7UEU;
 				INFOPLIST_FILE = TestTaskMegafon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,17 +453,19 @@
 				PRODUCT_BUNDLE_IDENTIFIER = a.s.bitsoev.TestTaskMegafon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		AC73ECC623180481006783C0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51241D88E30C8E9176C5169B /* Pods-TestTaskMegafon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 89WB9E7UEU;
 				INFOPLIST_FILE = TestTaskMegafon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,7 +473,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = a.s.bitsoev.TestTaskMegafon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

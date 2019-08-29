@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Персонаж-->
+        <scene sceneID="tY6-mM-QKM">
+            <objects>
+                <viewController storyboardIdentifier="CharacterVC" id="4vf-Pg-mqP" customClass="CharacterVC" customModule="TestTaskMegafon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n8J-nx-X0p">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FJo-7z-h1h">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="Dcn-aQ-rTc">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <connections>
+                                    <outlet property="dataSource" destination="4vf-Pg-mqP" id="0Kd-3t-J0p"/>
+                                    <outlet property="delegate" destination="4vf-Pg-mqP" id="ycq-12-BSm"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FJo-7z-h1h" firstAttribute="top" secondItem="ZWz-w6-7lG" secondAttribute="top" id="DpA-sh-vIe"/>
+                            <constraint firstItem="FJo-7z-h1h" firstAttribute="leading" secondItem="ZWz-w6-7lG" secondAttribute="leading" id="ED1-G8-6Xf"/>
+                            <constraint firstAttribute="bottom" secondItem="FJo-7z-h1h" secondAttribute="bottom" id="PTO-6F-d1s"/>
+                            <constraint firstItem="FJo-7z-h1h" firstAttribute="trailing" secondItem="ZWz-w6-7lG" secondAttribute="trailing" id="gTK-Yq-hxZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZWz-w6-7lG"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Персонаж" id="9yD-Yh-DeV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rkL-ct-kUN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="57.971014492753625" y="53.571428571428569"/>
+        </scene>
+    </scenes>
+</document>
