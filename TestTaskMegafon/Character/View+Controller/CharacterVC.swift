@@ -18,6 +18,7 @@ class CharacterVC: UIViewController {
         super.viewDidLoad()
         
         self.navigationItem.title = character.name
+        CoreDataServise.standard.saveCharacter(character)
     }
 
 }

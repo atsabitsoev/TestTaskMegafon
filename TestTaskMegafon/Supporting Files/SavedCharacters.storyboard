@@ -13,15 +13,41 @@
         <!--Сохраненные-->
         <scene sceneID="z2M-yt-V6j">
             <objects>
-                <viewController id="p5a-FR-pTx" sceneMemberID="viewController">
+                <viewController id="p5a-FR-pTx" customClass="SavedCharactersVC" customModule="TestTaskMegafon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NOh-mC-7gc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UpJ-ty-p5x">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="p5a-FR-pTx" id="0gW-Hx-nOR"/>
+                                    <outlet property="delegate" destination="p5a-FR-pTx" id="bta-kN-O1B"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AS8-Ke-IWM" firstAttribute="bottom" secondItem="UpJ-ty-p5x" secondAttribute="bottom" id="Cij-lT-EaT"/>
+                            <constraint firstItem="AS8-Ke-IWM" firstAttribute="trailing" secondItem="UpJ-ty-p5x" secondAttribute="trailing" id="dyk-1q-1Rm"/>
+                            <constraint firstItem="UpJ-ty-p5x" firstAttribute="leading" secondItem="AS8-Ke-IWM" secondAttribute="leading" id="gfW-xd-zUM"/>
+                            <constraint firstItem="UpJ-ty-p5x" firstAttribute="top" secondItem="AS8-Ke-IWM" secondAttribute="top" id="gpm-bo-UYp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="AS8-Ke-IWM"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Сохраненные" id="jyQ-np-qiD"/>
+                    <navigationItem key="navigationItem" title="Сохраненные" id="jyQ-np-qiD">
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="E1Y-lW-hn0">
+                            <color key="tintColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                            <connections>
+                                <action selector="trashButTapped:" destination="p5a-FR-pTx" id="rKA-N9-vYm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="UpJ-ty-p5x" id="P8i-UG-Ckt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ib-7I-t8h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
