@@ -26,7 +26,6 @@ class SearchService {
     
     func searchPeople(by searchString: String,
                       handler: @escaping (_ characters: [Character]?) -> ()) {
-        
         guard searchString != currentSearchString || nextPageExists else { return }
         
         if searchString == currentSearchString {
@@ -36,7 +35,6 @@ class SearchService {
         }
         
         let url = "\(ApiInfo.baseUrl)/?page=\(currentPage)&search=\(searchString)"
-        
         AF.request(url,
                    method: .get,
                    parameters: nil,

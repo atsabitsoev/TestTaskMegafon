@@ -38,6 +38,34 @@ class SavedCharactersVC: UIViewController, UITabBarControllerDelegate {
     }
     
     
+    private func showDeleteDBAlert() {
+        
+        let alert = UIAlertController(title: nil,
+                                      message: "Вы уверены, что хотите очистить базу данных?",
+                                      preferredStyle: .alert)
+        let deleteAction = UIAlertAction(title: "Очистить",
+                                         style: .destructive) { (_ ) in
+                                            self.performDeleteAction()
+        }
+        let cancelAction = UIAlertAction(title: "Отмена",
+                                         style: .cancel,
+                                         handler: nil)
+        alert.addAction(deleteAction)
+        alert.addAction(cancelAction)
+        self.present(alert,
+                     animated: true,
+                     completion: nil)
+    }
+    
+    private func performDeleteAction() {
+        
+        if CoreDataServise.standard.deleteAllCharacters() {
+            characters = []
+            tableView.reloadData()
+        }
+    }
+    
+    
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         if viewController == self.navigationController {
             characters = CoreDataServise.standard.getSavedCharacters()
@@ -46,11 +74,7 @@ class SavedCharactersVC: UIViewController, UITabBarControllerDelegate {
     
     
     @IBAction func trashButTapped(_ sender: UIBarButtonItem) {
-        
-        if CoreDataServise.standard.deleteAllCharacters() {
-            characters = []
-            tableView.reloadData()
-        }
+        showDeleteDBAlert()
     }
     
 
