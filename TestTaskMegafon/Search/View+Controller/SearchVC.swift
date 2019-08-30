@@ -32,12 +32,6 @@ class SearchVC: UIViewController {
         searchServise.sendEmptySearchRequest(handler: showNewSearchData(_:))
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        
-    }
-    
     
     func showNewSearchData(_ characters: [Character]?) {
         
@@ -47,6 +41,11 @@ class SearchVC: UIViewController {
         }
         
         self.characters = characters
+        
+        if tableView.contentSize.height < tableView.bounds.height {
+            searchServise.searchPeople(by: searchServise.currentSearchString,
+                                       handler: showNewSearchData(_:))
+        }
     }
     
     

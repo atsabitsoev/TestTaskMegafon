@@ -29,6 +29,7 @@ class SearchService {
         guard searchString != currentSearchString || nextPageExists else { return }
         
         if searchString == currentSearchString {
+            print(searchString)
             currentPage += 1
         } else {
             currentPage = 1
@@ -59,9 +60,9 @@ class SearchService {
                         
                         
                         self.currentResults = searchString == self.currentSearchString ? (self.currentResults ?? []) + characters : characters
-                        handler(self.currentResults)
                         
                         self.currentSearchString = searchString
+                        handler(self.currentResults)
                         
                     default:
                         handler(nil)

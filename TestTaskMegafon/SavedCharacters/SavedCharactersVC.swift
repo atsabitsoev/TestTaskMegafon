@@ -61,7 +61,6 @@ class SavedCharactersVC: UIViewController, UITabBarControllerDelegate {
         
         if CoreDataServise.standard.deleteAllCharacters() {
             characters = []
-            tableView.reloadData()
         }
     }
     
