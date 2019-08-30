@@ -20,27 +20,12 @@ class CoreDataServise {
     
     func saveCharacter(_ character: Character) {
         
+        guard !isEntityInDB(character.name) else { return }
+        
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         
-        let characterEntity = CharacterEntity(entity: CharacterEntity.entity(),
-                                              insertInto: context)
-        characterEntity.birthYear = character.birthYear
-        characterEntity.created = character.created
-        characterEntity.edited = character.edited
-        characterEntity.eyeColor = character.eyeColor
-        characterEntity.setValue(character.films, forKey: "films")
-        characterEntity.gender = character.gender
-        characterEntity.hairColor = character.hairColor
-        characterEntity.height = character.height
-        characterEntity.homeWorld = character.homeWorld
-        characterEntity.mass = character.mass
-        characterEntity.name = character.name
-        characterEntity.skinColor = character.skinColor
-        characterEntity.setValue(character.species, forKey: "species")
-        characterEntity.setValue(character.starships, forKey: "starships")
-        characterEntity.url = character.url
-        characterEntity.setValue(character.vehicles, forKey: "vehicles")
+       createEntity(character, context: context)
         
         do {
             try context.save()
@@ -86,7 +71,7 @@ class CoreDataServise {
     }
     
     
-    func deleteAllCharacters() {
+    func deleteAllCharacters() -> Bool {
         
         let context = ( UIApplication.shared.delegate as! AppDelegate ).persistentContainer.viewContext
         let deleteFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "CharacterEntity")
@@ -95,12 +80,44 @@ class CoreDataServise {
         {
             try context.execute(deleteRequest)
             try context.save()
+            return true
         }
         catch
         {
             print ("There was an error")
+            return false
         }
         
     }
     
+    
+    private func isEntityInDB(_ characterName: String) -> Bool {
+        return getSavedCharacters().contains(where: { (character) -> Bool in
+            return character.name == characterName
+        })
+    }
+    
+    
+    private func createEntity(_ character: Character, context: NSManagedObjectContext) {
+        
+        let characterEntity = CharacterEntity(entity: CharacterEntity.entity(),
+                        insertInto: context)
+        characterEntity.birthYear = character.birthYear
+        characterEntity.created = character.created
+        characterEntity.edited = character.edited
+        characterEntity.eyeColor = character.eyeColor
+        characterEntity.setValue(character.films, forKey: "films")
+        characterEntity.gender = character.gender
+        characterEntity.hairColor = character.hairColor
+        characterEntity.height = character.height
+        characterEntity.homeWorld = character.homeWorld
+        characterEntity.mass = character.mass
+        characterEntity.name = character.name
+        characterEntity.skinColor = character.skinColor
+        characterEntity.setValue(character.species, forKey: "species")
+        characterEntity.setValue(character.starships, forKey: "starships")
+        characterEntity.url = character.url
+        characterEntity.setValue(character.vehicles, forKey: "vehicles")
+    }
+ 
 }

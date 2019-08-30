@@ -72,7 +72,7 @@ class SearchVC: UIViewController {
     
     
     func didSelectCell(_ row: Int) {
-        
+        self.view.endEditing(true)
         let storyboard = UIStoryboard(name: "Character", bundle: nil)
         let characterVC = storyboard.instantiateViewController(withIdentifier: "CharacterVC") as! CharacterVC
         characterVC.character = characters[row]

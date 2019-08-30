@@ -47,7 +47,10 @@ class SavedCharactersVC: UIViewController, UITabBarControllerDelegate {
     
     @IBAction func trashButTapped(_ sender: UIBarButtonItem) {
         
-        CoreDataServise.standard.deleteAllCharacters()
+        if CoreDataServise.standard.deleteAllCharacters() {
+            characters = []
+            tableView.reloadData()
+        }
     }
     
 
